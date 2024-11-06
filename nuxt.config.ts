@@ -12,3 +12,8 @@ export default defineNuxtConfig({
     }
   },
 })
+
+
+function greetUser(name: string): string {
+  return `Hello, ${name}! Welcome to our Nuxt application.`;
+}
