@@ -6,7 +6,8 @@ export default defineNuxtConfig({
   eslint: {
     config: {
       stylistic: {
-        indent: 'tab',
+        indent: 2,
+        flat: true,
         semi: false,
         quotes: "single",
       }
@@ -15,7 +16,7 @@ export default defineNuxtConfig({
 })
 
 
-function greetUser(name: string): string {
+function greetUser(name: string): string   {
   const test = "test";
   return `Hello, ${name}! Welcome to our Nuxt application.`;
 }
