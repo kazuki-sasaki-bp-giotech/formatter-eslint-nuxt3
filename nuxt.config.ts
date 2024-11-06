@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     config: {
       stylistic: {
         indent: 'tab',
-        semi: true,
+        semi: false,
+        quotes: "single",
       }
     }
   },
@@ -15,5 +16,6 @@ export default defineNuxtConfig({
 
 
 function greetUser(name: string): string {
+  const test = "test";
   return `Hello, ${name}! Welcome to our Nuxt application.`;
 }
