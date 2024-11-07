@@ -8,14 +8,21 @@ export default defineNuxtConfig({
       stylistic: {
         indent: 2,
         flat: true,
-        semi: false,
+        semi: true,
         quotes: 'single',
       },
     },
   },
-})
+});
 
-function greetUser(name: string): string {
-  const test = 'test'
-  return `Hello, ${name}! Welcome to our Nuxt application.`
+function greetUser(name: string | null): string {
+  // この行が警告を出します
+  if (name) {
+    return `Hello, ${name}! Welcome to our Nuxt application.`;
+  }
+  else {
+    return 'Hello, Guest! Welcome to our Nuxt application.';
+  }
 }
+
+greetUser('John Doe');
